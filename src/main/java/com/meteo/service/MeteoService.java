@@ -15,7 +15,9 @@ public class MeteoService {
                 .uri(URI.create(url))
                 .GET()
                 .build();
+
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
         if (response.statusCode() == 404) {
             throw new RuntimeException("Ville introuvable : " + city);
         } else if (response.statusCode() == 401) {
@@ -27,6 +29,7 @@ public class MeteoService {
         String description = json.getJSONArray("weather").getJSONObject(0).getString("description");
         double temp = json.getJSONObject("main").getDouble("temp");
         int humidity = json.getJSONObject("main").getInt("humidity");
-        return new Meteo(description, temp, humidity, city);
+        double lon= json.getJSONObject("coord").getDouble("lon");
+        return new Meteo(description, temp, humidity, city,lon);
     }
 }

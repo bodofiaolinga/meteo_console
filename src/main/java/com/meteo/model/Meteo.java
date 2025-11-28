@@ -3,11 +3,20 @@ package com.meteo.model;  public class Meteo {
     private double temperature;
     private int humidite;
     private String city;
-    public Meteo(String description, double temperature, int humidite, String city) {
+
+    private double longitude;
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public Meteo(String description, double temperature, int humidite, String city, double longitude) {
         this.description = description;
         this.temperature = temperature;
         this.humidite =  humidite;
-        this.city = city;     }
+        this.city = city;
+        this.longitude=longitude;
+    }
     public String getDescription() {return description;     }
     public double getTemperature() {         return temperature;     }
     public int getHumidite() {         return humidite;     }
@@ -17,6 +26,8 @@ package com.meteo.model;  public class Meteo {
         return "description :"+ description + "\n" +
                 "temperature :"+ temperature+ "°C"+ "\n"+
                 "humiditer :" + humidite + "\n" +
-                "ville :" + city;
+                "ville :" + city+"\n" +
+                "longitude:" +longitude;
+
     }
 }

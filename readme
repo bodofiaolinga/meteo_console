@@ -1,0 +1,35 @@
+
+Meteo-App – Guide d'utilisation
+
+
+Description :
+
+Meteo-App est une application console Java qui affiche la météo actuelle
+d'une ville en temps réel (température, humidité, description du climat, ville,longitude).
+
+Prérequis :
+
+- Java installé (version 11, 17 ou 21)
+- Connexion Internet
+- Fichier JAR exécutable : meteo-app-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+Comment lancer l’application :
+
+1- Placez le fichier JAR dans un dossier accessible, par exemple :
+   C:\Users\Utilisateur\Documents
+
+2- Ouvrez un terminal ou PowerShell (Windows) ou Terminal (Mac/Linux)
+
+3.-Allez dans le dossier contenant le JAR :
+   cd C:\Users\Utilisateur\Documents
+
+4- Lancez le programme avec la commande :
+   java -jar meteo-app-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+5- Suivez les instructions à l’écran
+
+
+
+
+
+
